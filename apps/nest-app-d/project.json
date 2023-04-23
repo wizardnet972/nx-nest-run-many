@@ -1,7 +1,7 @@
 {
-  "name": "nest-app-a",
+  "name": "nest-app-d",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nest-app-a/src",
+  "sourceRoot": "apps/nest-app-d/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -11,12 +11,12 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/nest-app-a",
-        "main": "apps/nest-app-a/src/main.ts",
-        "tsConfig": "apps/nest-app-a/tsconfig.app.json",
-        "assets": ["apps/nest-app-a/src/assets"],
+        "outputPath": "dist/apps/nest-app-d",
+        "main": "apps/nest-app-d/src/main.ts",
+        "tsConfig": "apps/nest-app-d/tsconfig.app.json",
+        "assets": ["apps/nest-app-d/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/nest-app-a/webpack.config.js"
+        "webpackConfig": "apps/nest-app-d/webpack.config.js"
       },
       "configurations": {
         "development": {},
@@ -27,15 +27,15 @@
       "executor": "@nrwl/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "nest-app-a:build"
+        "buildTarget": "nest-app-d:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "nest-app-a:build:development",
-          "port": 4001
+          "buildTarget": "nest-app-d:build:development",
+          "port": 4004
         },
         "production": {
-          "buildTarget": "nest-app-a:build:production"
+          "buildTarget": "nest-app-d:build:production"
         }
       }
     },
@@ -43,14 +43,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nest-app-a/**/*.ts"]
+        "lintFilePatterns": ["apps/nest-app-d/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/nest-app-a/jest.config.ts",
+        "jestConfig": "apps/nest-app-d/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
